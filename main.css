@@ -8,12 +8,42 @@
 .craftWrapper {
   display: inline-block;
   vertical-align: top;
+  width: 28%;
+  height: 400px;
+  margin-right: 50px;
   margin-top: 70px;
   border: 1px solid #999;
   padding: 10px;
-  box-shadow: 1px 1px 20px #ccc;
+  box-shadow: 0px 0px 5px #337AB7;
   border-radius: 5px; }
+  .craftWrapper:nth-child(3n) {
+    margin-right: 0; }
   .craftWrapper h1 {
-    text-decoration: underline;
     margin-top: 10px;
-    font-size: 20px; }
+    font-size: 18px;
+    text-transform: uppercase; }
+
+/****************  SHOW ITEM PAGE *******************/
+.singleCraftWrapper {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #337AB7;
+  border-radius: 5px; }
+  .singleCraftWrapper .singleImgWrapper {
+    display: inline-block;
+    width: 50%; }
+  .singleCraftWrapper h3 {
+    margin-top: 0;
+    text-transform: uppercase; }
+  .singleCraftWrapper img {
+    width: 100%; }
+  .singleCraftWrapper .listingData {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top; }
+
+.description {
+  margin-top: 10px; }

@@ -1,10 +1,13 @@
 
-<div class="craftWrapper">
-  <!-- <h1>I am still working!</h1> -->
-  <a ng-href="{{ el.url }}"><h1>{{ crafts.title }}</h1></a>
-  <img ng-src="{{ crafts.image }}" alt="" />
-  <p><b>Description: </b>{{ crafts.desc }}</p>
-  <h3><b>Price: </b>{{ crafts.price }}</h3>
-  <!-- <button type="button" class="btn btn-med btn-primary"name="button">View</button>
-  <button type="button" class="btn btn-med btn-primary"name="button">Add to Cart</button> -->
+<div class="singleCraftWrapper">
+  <div class="singleImgWrapper">
+    <img ng-src="{{ craft.MainImage.url_fullxfull }}" alt="" />
+  </div>
+  <div class="listingData">
+    <a ng-href="{{ craft.url }}"><h3>{{ craft.title }}</h3></a>
+    <p><b>Materials: </b>{{ craft.materials.toString() }}</p>
+    <h4><b>Price: </b>{{ craft.price }}</h4>
+    <button type="button" class="btn btn-med btn-primary"name="button">Add to Cart</button>
+  </div>
+  <p class="description"><b>Description: </b>{{ craft.description }}</p>
 </div>

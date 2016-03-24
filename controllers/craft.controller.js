@@ -8,7 +8,8 @@ angular
       CraftyService.showCraft($routeParams.craftId)
         .then(function(craft) {
           console.log("info", craft);
-          $scope.craft = craft.data;
+          window.glob = craft;
+          $scope.craft = craft.data.results[0];
         })
     }
 

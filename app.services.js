@@ -9,11 +9,13 @@ angular
          return $http.get(cors + url);
        }
 
+      //  function showCraft(id) {
+      //    return $http.get(cors + url + "/" + id)
+      //  }
+
        function showCraft(id) {
-         return $http.get(cors + url + "/" + id)
-       }
-
-
+             return $http.get(cors + encodeURIComponent('https://openapi.etsy.com/v2/listings/' + id + '?api_key=' + key + '&includes=MainImage'));
+           }
 
 
     return {
