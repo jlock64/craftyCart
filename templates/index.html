@@ -1,9 +1,13 @@
-<div class="craftWrapper" ng-repeat="craft in crafts">
+<div class="filterQuery">
+  <input class="form-control" ng-model="query" type="text" name="name" value="" placeholder="filter by price or item name">
+</div>
+<a href="/#/cart"><button type="button" class="btn btn-med btn-primary"name="button">View</button></a>
+<div class="craftWrapper" ng-repeat="craft in crafts | filter:query | orderBy: 'price' | orderBy: 'title'">
   <!-- <h1>I am still working!</h1> -->
   <a ng-href="{{ craft.url }}"><h1>{{ craft.title }}</h1></a>
   <img ng-src="{{ craft.image }}" alt="" />
   <!-- <p><b>Description: </b>{{ craft.desc }}</p> -->
-  <h3><b>Price: </b>{{ craft.price }}</h3>
+  <h3><b>Price: $</b>{{ craft.price }}</h3>
   <a href="/#/craft/{{ craft.id }}"><button type="button" class="btn btn-med btn-primary"name="button">View</button></a>
-  <a href="#"><button type="button" class="btn btn-med btn-primary"name="button">Add to Cart</button></a>
+  <button type="button" class="btn btn-med btn-primary" ng-click="addToCart(craft)" name="button">Add to Cart</button>
 </div>

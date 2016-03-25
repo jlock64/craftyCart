@@ -7,6 +7,15 @@
   width:80%
 }
 
+.filterQuery {
+  margin-top: 50px;
+  input {
+    width: 50%;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+}
+
 .craftWrapper {
   display: inline-block;
   vertical-align: top;
@@ -19,9 +28,9 @@
   padding: 10px;
   box-shadow: 0px 0px 5px #337AB7;
   border-radius: 5px;
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
+  // &:nth-child(2n) {
+  //   margin-right: 0;
+  // }
   h1 {
     margin-top: 10px;
     font-size: 18px;

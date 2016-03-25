@@ -8,9 +8,6 @@ angular
           console.log(data);
           window.glob = data;
           var crafts = data.data.results.map(function(el) {
-            // if(indexOf(el.MainImage.url_170x135) === -1 ) {
-            //   return el.MainImage;
-            // }
             return {
               title: el.title,
               desc: el.description,
@@ -29,6 +26,14 @@ angular
         });
     } // end of pageLoad
     pageLoad();
+
+    function addToCart(product) {
+      CraftyService.addToCart(product)
+        .then(function(data) {
+          console.log(data);
+        })
+    }
+    $scope.addToCart = addToCart;
 
 
 
